@@ -99,7 +99,7 @@ public class ACPWrapper {
         List<string> parameters = msgparts[1].Split(DIVIDER).ToList();
 
         if (parameters.Count > 0) {                                            //check if all parameters have a value
-          for (int i = parameters.Count - 1; i >=0 ; i--) {
+          for (int i = parameters.Count - 1; i >= 0 ; i--) {
             if (parameters[i] == "") {
               parameters.RemoveAt(i);
             }
@@ -109,7 +109,7 @@ public class ACPWrapper {
             Pong(senderId);
 
             AddAdress(senderId, parameters[1]);
-          } else if (parameters[0] == MATINGRESPONSE && parameters.Count > 2) {
+          } else if (parameters[0] == MATINGRESPONSE && parameters.Count >= 2) {
             AddAdress(senderId, parameters[1]);
           }
         }
