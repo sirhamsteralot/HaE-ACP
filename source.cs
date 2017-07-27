@@ -36,7 +36,7 @@ public class ACPWrapper {
     isList = true;
   }
 
-  public ACPWrapper(Program p, List<IMyRadioAntenna> list = null) {
+  public ACPWrapper(Program p, bool list, List<IMyRadioAntenna> list = null) {
     CommonInit(p);
 
     if (list != null)
