@@ -12,19 +12,19 @@ the base communications protocol i use is:
 here is where i discribe all the usefull info :)
 
 ### Constructors:
-- public ACPWrapper(Program p, Func<IMyTerminalBlock, bool> collect = null)
+#### public ACPWrapper(Program p, Func<IMyTerminalBlock, bool> collect = null)
   Initializes an instance of ACPWrapper with a list of Radio antennas.
   
-- public ACPWrapper(Program p, bool HasList, List<IMyRadioAntenna> list = null)
+#### public ACPWrapper(Program p, bool HasList, List<IMyRadioAntenna> list = null)
   Initializes an instance of ACPWrapper with a list of Radio antennas.
   
-- public ACPWrapper(Program p, IMyLaserAntenna lAntenna)
+#### public ACPWrapper(Program p, IMyLaserAntenna lAntenna)
   Initializes an instance of ACPWrapper with a single laser antenna (will require additional setup, see further down under SetLaserTarget tho you can also manually connect through GUI).
   
-- public ACPWrapper(Program p, IMyRadioAntenna antenna)
+#### public ACPWrapper(Program p, IMyRadioAntenna antenna)
   Initializes an instance of ACPWrapper with a single radio antenna.
   
-- public ACPWrapper(Program p, string antennaName)
+#### public ACPWrapper(Program p, string antennaName)
   Initializes an instance of ACPWrapper with either a radio  or laser antenna depending on what it finds with the name.
   
 ### Public Methods:
