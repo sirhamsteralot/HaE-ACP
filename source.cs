@@ -109,6 +109,8 @@ public class ACPWrapper {
             Pong(senderId);
 
             AddAdress(senderId, parameters[1]);
+          } else if (parameters[0] == MATINGRESPONSE && parameters.Count > 2) {
+            AddAdress(senderId, parameters[1]);
           }
         }
 
