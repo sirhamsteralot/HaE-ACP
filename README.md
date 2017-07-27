@@ -90,8 +90,8 @@ here is where i discribe all the usefull info :)
 #### Ping()
   Sends out a ping message so that other PBS can add the one you are on to their adressbook.
   
-#### Pong()
-  Basically the same as Ping but this will also send your own entityID and this will also not trigger other PBs to "Pong" back.
+#### Pong(long EntityId)
+  Basically the same as Ping but this will also send your own entityID and this will also not trigger other PBs to "Pong" back. you also will have to pass an entity ID to send it to here
   
 #### public void SetLaserTarget(Vector3D location)
   Sets a target for the laser antenna (if present) using a vector3D
