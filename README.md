@@ -1,2 +1,2 @@
 # HaE-ACP
-Featurerich Antenna Protocol wrapper for SE
+Feature rich Antenna Protocol wrapper for SE
