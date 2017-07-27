@@ -11,6 +11,28 @@ the base communications protocol i use is:
 ## Code:
 here is where i discribe all the usefull info :)
 
+### Properties:
+  you can only change this before compiling!
+
+#### CUSTOMNAME
+  What the PB sends out as its name for other PBs to use in their adress books, please change this to something thats not the default :)
+  
+#### HEADDIVIDER
+  What is used to seperate the head from the body of the message. prolly wanna leave it as default.
+
+#### DIVIDER
+  What is used to divide different arguments from eachother within the message. prolly wanna leave this as default aswell.
+  
+#### MATING
+  What is used to Mate with other PBs, Prolly wanna leave this as default aswell.
+  
+#### MATINGRESPONSE
+  The response to the Mating call :3 (prolly wanna leave default)
+  
+#### STRINGMAXLENGTH
+  the maximum length of the string you can send, 100k is vanilla limit so setting it higher wont do anything :)
+
+
 ### Constructors:
 #### public ACPWrapper(Program p, Func<IMyTerminalBlock, bool> collect = null)
   Initializes an instance of ACPWrapper with a list of Radio antennas.
