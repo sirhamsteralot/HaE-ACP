@@ -34,6 +34,8 @@ public class ACPWrapper {
     P.GridTerminalSystem.GetBlocksOfType(antennaList, collect);
 
     isList = true;
+
+    Ping();
   }
 
   public ACPWrapper(Program p, bool HasList, List<IMyRadioAntenna> list = null) {
@@ -41,18 +43,23 @@ public class ACPWrapper {
 
     if (list != null)
       antennaList = list;
+
+    Ping();
   }
 
   public ACPWrapper(Program p, IMyLaserAntenna lAntenna) {
     CommonInit(p);
     this.lAntenna = lAntenna;
     isLaser = true;
+
+    Ping();
   }
 
   public ACPWrapper(Program p, IMyRadioAntenna antenna) {
     CommonInit(p);
     this.antenna = antenna;
 
+    Ping();
   }
 
   public ACPWrapper(Program p, string antennaName) {
@@ -67,6 +74,8 @@ public class ACPWrapper {
       this.lAntenna = (IMyLaserAntenna)temp;
       isLaser = true;
     }
+
+    Ping();
   }
 
   private void CommonInit(Program p) {
@@ -75,7 +84,6 @@ public class ACPWrapper {
     msgQueue = new List<string>();
     adressBook = new HashSet<Adress>();
     TRANSMITTARGET = MyTransmitTarget.Default;
-    Ping();
   }
 
   /*========| Public Methods |========*/
