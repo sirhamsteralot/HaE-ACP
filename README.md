@@ -12,25 +12,49 @@ the base communications protocol i use is:
 here is where i discribe all the usefull info :)
 
 ### Properties:
+
+  
+#### Pre compile vars:
   you can only change this before compiling!
 
-#### CUSTOMNAME
+##### CUSTOMNAME
   What the PB sends out as its name for other PBs to use in their adress books, please change this to something thats not the default :)
   
-#### HEADDIVIDER
+##### HEADDIVIDER
   What is used to seperate the head from the body of the message. prolly wanna leave it as default.
 
-#### DIVIDER
+##### DIVIDER
   What is used to divide different arguments from eachother within the message. prolly wanna leave this as default aswell.
   
-#### MATING
+##### MATING
   What is used to Mate with other PBs, Prolly wanna leave this as default aswell.
   
-#### MATINGRESPONSE
+##### MATINGRESPONSE
   The response to the Mating call :3 (prolly wanna leave default)
   
-#### STRINGMAXLENGTH
+##### STRINGMAXLENGTH
   the maximum length of the string you can send, 100k is vanilla limit so setting it higher wont do anything :)
+
+
+
+
+#### (Public) Normal vars
+  Normal variables used during regular script execution :3
+  
+##### antennaList
+  a list that holds your radio antennas
+##### isList
+  boolean that specifies if above list is in use.
+  
+##### antenna
+  cointains reference to the radio antenna (when in use)
+##### lAntenna
+  cointains reference to the laser antenna (when in use)
+
+##### TRANSMITTARGET
+  MyTransmitTarget Enum, set this to whatever you want :p
+
+
 
 
 ### Constructors:
