@@ -5,7 +5,6 @@ public class ACPWrapper {
   public readonly char DIVIDER = '|';               //| == HaE standard
   public readonly string MATING = "PING";           //PING == HaE standard
   public readonly string MATINGRESPONSE = "PONG";   //PONG == HaE standard
-  public readonly string OVERRIDE = "OVERRIDE";     //OVERRIDE == HaE standard
   public readonly int STRINGMAXLENGTH = 100000;     //Maximum msg length, must be 100k or lower!
 
   /*========| Main vars |========*/
@@ -186,8 +185,8 @@ public class ACPWrapper {
     return true;
   }
 
-  public void Ping() {            //Initial ping out, prompts receivers to send a message back
-    PrepareMSG(new string[] {MATING, CUSTOMNAME}, OVERRIDE);
+  public void Ping() {            //Initial ping out, prompts receivers to send a message back.
+    PrepareMSG(new string[] {MATING, CUSTOMNAME}, 0);
   }
 
   public void Pong(long Id) {     //Ping response.
@@ -202,7 +201,7 @@ public class ACPWrapper {
     lAntenna.SetTargetCoords(GPS);
   }
 
-  public long? GetIdWithName(string Name) { //Returns first ID with name in the adressBook
+  public long? GetIdWithName(string Name) { //Returns first ID with name in the adressBook.
     foreach (Adress I in adressBook) {
       if (I.Name == Name)
         return I.Id;
@@ -249,7 +248,7 @@ public class ACPWrapper {
     msgQueue.RemoveAt(0);
   }
 
-  private void ListSend() {                               //Sends messages from the queue using lists
+  private void ListSend() {                               //Sends messages from the queue using lists.
     for (int i = 0; i < antennaList.Count; i++) {
       if (msgQueue.Count > 0) {
         antennaList[i].TransmitMessage(msgQueue[0]);
