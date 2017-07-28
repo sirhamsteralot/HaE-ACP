@@ -92,7 +92,7 @@ public class ACPWrapper {
 
     //Process MSG
     senderId = 0;
-    string[] msgparts = Argument.Split(HEADDIVIDER);
+    string[] msgparts = Argument.Split(HEADDIVIDER, 2);
 
     if (msgparts.Length > 0) {
       if (IsDirectedAtMe(msgparts[0], out senderId)) {
@@ -105,12 +105,16 @@ public class ACPWrapper {
             }
           }
 
-          if (parameters[0] == MATING && parameters.Count > 2) {               //Add to aderssbook
+          if (parameters[0] == MATING && parameters.Count == 2) {               //Add to aderssbook
             Pong(senderId);
 
             AddAdress(senderId, parameters[1]);
-          } else if (parameters[0] == MATINGRESPONSE && parameters.Count >= 2) {
+
+            return null;
+          } else if (parameters[0] == MATINGRESPONSE && parameters.Count == 2) {
             AddAdress(senderId, parameters[1]);
+
+            return null;
           }
         }
 
