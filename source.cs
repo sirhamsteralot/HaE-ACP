@@ -243,18 +243,20 @@ public class ACPWrapper {
 
   private void IndividualSend() {
     if (isLaser) {
-      lAntenna.TransmitMessage(msgQueue[0]);
+      if (lAntenna.TransmitMessage(msgQueue[0]))
+        msgQueue.RemoveAt(0);
     } else {
-      antenna.TransmitMessage(msgQueue[0], TRANSMITTARGET);
+      if (antenna.TransmitMessage(msgQueue[0], TRANSMITTARGET))
+        msgQueue.RemoveAt(0);
     }
-    msgQueue.RemoveAt(0);
+
   }
 
   private void ListSend() {                               //Sends messages from the queue using lists.
     for (int i = 0; i < antennaList.Count; i++) {
       if (msgQueue.Count > 0) {
-        antennaList[i].TransmitMessage(msgQueue[0]);
-        msgQueue.RemoveAt(0);
+        if (antennaList[i].TransmitMessage(msgQueue[0]))
+          msgQueue.RemoveAt(0);
       } else {
         break;
       }
