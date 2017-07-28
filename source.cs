@@ -1,8 +1,8 @@
 public class ACPWrapper {
   /*========| Customize |========*/
   public readonly string CUSTOMNAME = "HaE Server"; //Whatever you want it to be.
-  public readonly char HEADDIVIDER = '?';           //? == HaE standard
-  public readonly char DIVIDER = '|';               //| == HaE standard
+  public readonly char HEADDIVIDER = (char)0x1c;    //(char)0x1c == HaE standard
+  public readonly char DIVIDER = (char)0x1f;        //(char)0x1f == HaE standard
   public readonly string MATING = "PING";           //PING == HaE standard
   public readonly string MATINGRESPONSE = "PONG";   //PONG == HaE standard
   public readonly int STRINGMAXLENGTH = 100000;     //Maximum msg length, must be 100k or lower!
