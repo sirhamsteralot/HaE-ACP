@@ -128,6 +128,10 @@ public class ACPWrapper {
     return null;
   }
 
+  public bool PrepareMSG(string parameter, long To, bool anon = false) {
+    PrepareMSG(new string[] {parameter}, To, anon);
+  }
+
   public void AddAdress(long Id, string Name) {
     adressBook.Add(new Adress(Id, Name));
   }
