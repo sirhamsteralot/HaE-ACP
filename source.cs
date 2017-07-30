@@ -21,7 +21,7 @@ public class ACPWrapper {
   private List<string> msgQueue;
   public MyTransmitTarget TRANSMITTARGET;
 
-  private HashSet<Adress> adressBook;
+  public HashSet<Adress> adressBook;
 
 
   /*======| Constructors |======*/
