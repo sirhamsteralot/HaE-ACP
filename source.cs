@@ -99,7 +99,9 @@ public class ACPWrapper
     public string[] Main(string Argument, out long senderId)
     {                  //Main method, call each tick/when you received a msg.
                        //Each tick
-        SendMSG();
+        
+        if (Argument == "") 
+            SendMSG();
 
         //Process MSG
         senderId = 0;
