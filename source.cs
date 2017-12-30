@@ -289,7 +289,7 @@ public class ACPWrapper
 
             if (Int64.TryParse(headparts[1], out MyID))
             {  //Parses My ID
-                if (MyID == P.Me.EntityId)
+                if (MyID == P.Me.EntityId || MyID == 0)
                     return true;
 
                 return false;
